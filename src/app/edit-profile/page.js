@@ -1,7 +1,7 @@
 "use client"
 
 import Header from '@/components/header/Header'
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import styles from './edit-profile.module.css'
 import Sidebar from '@/components/sidebar/Sidebar'
 import { BiEditAlt } from "react-icons/bi";
@@ -24,8 +24,15 @@ function Page() {
         }
     }, []);
 
-    const storedUser = localStorage.getItem('userData');
+    useEffect(() => {
+        const storedUser = localStorage.getItem('userData');
     const googleUser = localStorage.getItem('user');
+        if (storedUser === null || storedUser === "undefined") {
+            handleGoogleSubmit(e);
+        } else {
+        handleSubmit(e);
+        }
+    } , []);
 
     const [form, setForm] = useState({
         username: "",
