@@ -24,7 +24,7 @@ function Header() {
           if (storedUser || googeleUser) {
               setUser(JSON.parse(storedUser) || JSON.parse(googeleUser));
           }
-      }, [])
+      }, []);
   
             // Google login store user and token in sessionStorage
   const getUser = async () => {
@@ -40,12 +40,12 @@ function Header() {
         }
     }
 
-const StoredUserData = JSON.parse(localStorage.getItem('userData'));
     useEffect(() => {
+        const StoredUserData = JSON.parse(localStorage.getItem('userData'));
         if (!StoredUserData) {
             getUser();
         }
-    }, [])
+    }, []);
 
     const switchUser = async () => {
       localStorage.removeItem('userData');

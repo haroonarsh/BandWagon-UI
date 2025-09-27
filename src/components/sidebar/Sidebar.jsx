@@ -33,7 +33,7 @@ function Sidebar() {
           if (storedUser || googeleUser) {
               setUser(JSON.parse(storedUser) || JSON.parse(googeleUser));
           }
-      }, [])
+      }, []);
 
             // logout function
     const handleLogout = () => {
