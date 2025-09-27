@@ -29,7 +29,7 @@ function Header() {
             // Google login store user and token in sessionStorage
   const getUser = async () => {
         try {
-            const response = await axios.get("http://localhost:8000/login/success", { withCredentials: true });
+            const response = await axios.get("https://band-wagon-backend.vercel.app/login/success", { withCredentials: true });
 
             setUser(response.data.user.user);
             
@@ -55,7 +55,7 @@ function Header() {
 
       try {
         if (user.role === "user") {
-          const response = await axios.put("http://localhost:8000/api/user/become-artist",
+          const response = await axios.put("https://band-wagon-backend.vercel.app/api/user/become-artist",
             { withCredentials: true },
             {
               headers: {
@@ -75,7 +75,7 @@ function Header() {
             router.push('/home');
         } 
       } else {
-        const response = await axios.put("http://localhost:8000/api/user/become-user",
+        const response = await axios.put("https://band-wagon-backend.vercel.app/api/user/become-user",
           { withCredentials: true },
           {
             headers: {

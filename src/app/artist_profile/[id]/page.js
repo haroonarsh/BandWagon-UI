@@ -32,7 +32,7 @@ function Artist_profile() {
   useEffect(() => {
     const fetchArtist = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/user/get-artist/:?id=${id}`);
+        const response = await axios.get(`https://band-wagon-backend.vercel.app/api/user/get-artist/:?id=${id}`);
         
         if (response.data.data) {
           setArtist(response.data.data);

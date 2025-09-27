@@ -77,7 +77,7 @@ function GoogleMaps({ selectedLocation }) {
     // Fetch shows
     const fetchShows = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/api/user/users-with-shows');
+        const response = await axios.get('https://band-wagon-backend.vercel.app/api/user/users-with-shows');
         const allShows = response.data.data.flatMap(user => 
           user.shows.map(show => ({
             ...show,

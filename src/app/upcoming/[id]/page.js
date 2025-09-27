@@ -23,7 +23,7 @@ function UpcomingShow() {
 
         const fetchShows = async () => {
             try {
-                const response = await axios.get(`http://localhost:8000/api/user/get-artist-shows/${id}?type=${isOpenTab}`);
+                const response = await axios.get(`https://band-wagon-backend.vercel.app/api/user/get-artist-shows/${id}?type=${isOpenTab}`);
                 const artistData = Array.isArray(response.data.data) ? response.data.data : [response.data.data];
                 console.log("response", response);
                 

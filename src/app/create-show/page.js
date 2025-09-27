@@ -105,7 +105,7 @@ function Page() {
 
             const token = localStorage.getItem('UserAccessToken') || localStorage.getItem('accessToken');
             
-            const response = await axios.post('http://localhost:8000/api/user/create-show', formData, {
+            const response = await axios.post('https://band-wagon-backend.vercel.app/api/user/create-show', formData, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data'

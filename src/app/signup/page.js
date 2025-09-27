@@ -28,7 +28,7 @@ function SignupPage() {
       e.preventDefault();
       setLoading(true);
       try {
-        const response = await axios.post(`http://localhost:8000/api/user/signup`, formData);
+        const response = await axios.post(`https://band-wagon-backend.vercel.app/api/user/signup`, formData);
 
         if (response.status === 201 || response.status === 200) {
           toast.success(response.message);
@@ -51,7 +51,7 @@ function SignupPage() {
   const handleGoogleLogin = () => {
     try {
       // Redirect to Google login page
-      window.open('http://localhost:8000/auth/google/callback', '_self');
+      window.open('https://band-wagon-backend.vercel.app/auth/google/callback', '_self');
     } catch (error) {
       console.error("Google Login Error:", error);
     }

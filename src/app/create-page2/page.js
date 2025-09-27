@@ -111,7 +111,7 @@ function Page() {
                 if (form.artistImage) {
                     formData.append('artistImage', form.artistImage);
                 }
-                const response = await axios.post('http://localhost:8000/api/user/create-artist-page', formData, {
+                const response = await axios.post('https://band-wagon-backend.vercel.app/api/user/create-artist-page', formData, {
                     headers: {
                         Authorization: `Bearer ${userDataToken === null || userDataToken === "undefined" 
                         ? googleUserToken 

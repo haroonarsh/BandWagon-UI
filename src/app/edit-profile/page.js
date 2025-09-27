@@ -73,7 +73,7 @@ function Page() {
                 console.log("No profile image selected");
             }
 
-            const response = await axios.put('http://localhost:8000/api/user/edit-profile', formData, {
+            const response = await axios.put('https://band-wagon-backend.vercel.app/api/user/edit-profile', formData, {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data',
@@ -116,7 +116,7 @@ function Page() {
             } else {
                 console.log("No profile image selected");
             }
-            const response = axios.put('http://localhost:8000/update-profile', formData , {
+            const response = axios.put('https://band-wagon-backend.vercel.app/update-profile', formData , {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'multipart/form-data',

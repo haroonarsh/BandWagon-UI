@@ -67,7 +67,7 @@ function Page() {
         const googleUserToken = localStorage.getItem('accessToken');
 
         try {
-            const response = await axios.put('http://localhost:8000/api/user/update-password', formData, {
+            const response = await axios.put('https://band-wagon-backend.vercel.app/api/user/update-password', formData, {
                 headers: {
                     'Authorization': `Bearer ${userDataToken || googleUserToken}`,
                     'Content-Type': 'application/json'
@@ -106,7 +106,7 @@ function Page() {
         const googleUserToken = localStorage.getItem('accessToken');
 
         try {
-            const response = await axios.put('http://localhost:8000/api/user/update-email', formData, {
+            const response = await axios.put('https://band-wagon-backend.vercel.app/api/user/update-email', formData, {
                 headers: {
                     'Authorization': `Bearer ${userDataToken || googleUserToken}`,
                     'Content-Type': 'application/json'
@@ -151,7 +151,7 @@ function Page() {
 
   try {
     const response = await axios.delete(
-      'http://localhost:8000/api/user/delete-user',
+      'https://band-wagon-backend.vercel.app/api/user/delete-user',
     //   { data: formData },
       {
         data: formData,

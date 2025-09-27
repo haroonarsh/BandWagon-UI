@@ -48,7 +48,7 @@ function Sidebar() {
     }
 
     const logoutGoogle = () => {
-        const response = axios.get('http://localhost:8000/logout', { withCredentials: true });
+        const response = axios.get('https://band-wagon-backend.vercel.app/logout', { withCredentials: true });
 
         if (response.status === 200) {
             localStorage.removeItem('user');

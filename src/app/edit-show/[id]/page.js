@@ -103,7 +103,7 @@ function Page() {
 
             // const token = localStorage.getItem('UserAccessToken') || localStorage.getItem('accessToken');
             
-            const response = await axios.put(`http://localhost:8000/api/user/edit-show/${id}`, formData,
+            const response = await axios.put(`https://band-wagon-backend.vercel.app/api/user/edit-show/${id}`, formData,
                 {
                     headers: {
                         'Content-Type': 'multipart/form-data',

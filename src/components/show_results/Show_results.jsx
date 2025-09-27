@@ -27,7 +27,7 @@ function Show_results({ artist }) {
         const fetchArtists = async () => {
             try {
                 const token = localStorage.getItem('accessToken') || localStorage.getItem('UserAccessToken');
-                const response = await axios.get('http://localhost:8000/api/user/get-artist', {
+                const response = await axios.get('https://band-wagon-backend.vercel.app/api/user/get-artist', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

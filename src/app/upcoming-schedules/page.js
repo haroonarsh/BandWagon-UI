@@ -49,7 +49,7 @@ function Page() {
 
                 // Fetch shows from backend
                 const token = localStorage.getItem('UserAccessToken') || localStorage.getItem('accessToken');
-                const response = await axios.get('http://localhost:8000/api/user/get-shows', {
+                const response = await axios.get('https://band-wagon-backend.vercel.app/api/user/get-shows', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

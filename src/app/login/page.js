@@ -34,7 +34,7 @@ function Login() {
     
     
     try {
-      const response = await axios.post('http://localhost:8000/api/user/login', formData);
+      const response = await axios.post('https://band-wagon-backend.vercel.app/api/user/login', formData);
   
       if (response.status === 200) {
         const user = response.data.data.user; // User data
@@ -61,7 +61,7 @@ function Login() {
   const handleGoogleLogin = () => {
     try {
       // Redirect to Google login page
-      window.open('http://localhost:8000/auth/google/callback', '_self');
+      window.open('https://band-wagon-backend.vercel.app/auth/google/callback', '_self');
     } catch (error) {
       console.error("Google Login Error:", error);
     }
