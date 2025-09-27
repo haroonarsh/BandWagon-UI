@@ -3,23 +3,12 @@
 import React, { useState, useEffect } from 'react'
 import styles from './upcoming_shows.module.css'
 import { MdOutlineLocationOn } from "react-icons/md";
-// import { GiMusicSpell } from "react-icons/gi";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { FaRegClock } from "react-icons/fa";
 import Header from '@/components/header/Header';
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useParams, useRouter } from 'next/navigation';
 import axios from 'axios';
-// import { BiDollarCircle } from "react-icons/bi";
-// import { FaSpotify } from "react-icons/fa";
-// import { GrYoutube } from "react-icons/gr";
-// import { FaSoundcloud } from "react-icons/fa";
-// import { FaFacebook } from "react-icons/fa";
-// import { FaXTwitter } from "react-icons/fa6";
-// import { RiMoneyDollarBoxFill } from "react-icons/ri";
-// import { FaVimeoV } from "react-icons/fa6";
-// import { FaRegCheckCircle } from "react-icons/fa";
-// import { RxCross2 } from "react-icons/rx";
 
 function UpcomingShow() {
 
@@ -78,44 +67,7 @@ function UpcomingShow() {
     }
 
     const icon = "./icons/viral.png"
-    // const events = {
-    //     upcoming: [
-    //         shows.map(show => (
-    //             <div key={show._id}>
-    //                 <div className={styles.show}>
-    //                     <div className={styles.location}>
-    //                         <MdOutlineLocationOn className={styles.icon} />
-    //                         <p className={styles.location_name}>{show.location}</p>
-    //                     </div>
-    //                     <div className={styles.date}>
-    //                         <MdOutlineCalendarMonth className={styles.icon} />
-    //                         <p className={styles.date_name}>{show.date}</p>
-    //                     </div>
-    //                     <div className={styles.time}>
-    //                         <FaRegClock className={styles.icon} />
-    //                         <p className={styles.time_name}>{show.time}</p>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         ))
-    //     ],
-    //     past: [
-    //         {
-    //             name: "Vincent van Gogh",
-    //             location: "Amsterdam",
-    //             date: "12 May, Fri",
-    //             time: "1:00 PM - 8:00 PM",
-    //         },
-    //         {
-    //             name: "Leonardo da Vinci",
-    //             location: "Florence",
-    //             date: "20 Apr, Thu",
-    //             time: "10:00 AM - 5:00 PM",
-    //         },
-    //     ],
-    // };
-
-    // const filterEvents = isOpenTab === "upcoming" ? events.upcoming : events.past;
+    
   return (
     <>
             {/* header */}
