@@ -121,7 +121,7 @@ function Header() {
   return (
     <>
         <header className={styles.header}>
-        <div className={styles.logo}>
+        <div className={styles.logo} onClick={() => router.push('/home')}>
           <img src="app-icon.png" alt="" />
           <h1 className='heading_4_regular'>BandWagon</h1>
         </div>
