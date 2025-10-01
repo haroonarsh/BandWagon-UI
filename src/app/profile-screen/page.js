@@ -56,7 +56,7 @@ function Page() {
                     >Edit profile</button>
                 </div>
                 <div className={styles.saved}
-                onClick={() => router.push('/saved-artist')}
+                // onClick={() => router.push('/saved-artist')}
                 >
                     <p>View saved & hidden artists</p> 
                     <FaAngleRight />

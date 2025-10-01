@@ -27,8 +27,6 @@ function Sidebar() {
           // Get the user data from localStorage
           const storedUser = localStorage.getItem('userData');
           const googeleUser = localStorage.getItem('user');
-        //   console.log("storedUser", storedUser);
-        //     console.log("googeleUser", googeleUser);
           
           if (storedUser || googeleUser) {
               setUser(JSON.parse(storedUser) || JSON.parse(googeleUser));

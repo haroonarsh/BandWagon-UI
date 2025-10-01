@@ -19,21 +19,21 @@ function Page() {
         const storedUser = localStorage.getItem('userData');
         const googleUser = localStorage.getItem('user');
         if (storedUser || googleUser) {
-            setUser(JSON.parse(storedUser) || JSON.parse(googleUser));
+            setUser(JSON.parse(storedUser) || JSON.parse(googleUser) || null);
             // setUser(JSON.parse(storedUser));
         }
     }, []);
 
-    useEffect(() => {
-        const storedUser = localStorage.getItem('userData');
+    const submitHandler = (e) => {
+    e.preventDefault();
+    const storedUser = localStorage.getItem('userData');
     const googleUser = localStorage.getItem('user');
-        if (storedUser === null || storedUser === "undefined") {
-            handleGoogleSubmit(e);
-        } else {
+    if (storedUser === null || storedUser === "undefined") {
+        handleGoogleSubmit(e);
+    } else {
         handleSubmit(e);
-        }
-    } , []);
-
+    }
+    }
     const [form, setForm] = useState({
         username: "",
         email: "",
@@ -160,13 +160,7 @@ function Page() {
                     <h1 className={styles.heading}>Edit profile</h1>
                     </div>
                 <div className={styles.profile}>
-                    <form onSubmit={(e) => {
-                        if (storedUser === null || storedUser === "undefined") {
-                            handleGoogleSubmit(e);
-                        } else {
-                            handleSubmit(e);
-                        }
-                    }} encType='multipart/form-data' className={styles.profile_info}>
+                    <form onSubmit={submitHandler} encType='multipart/form-data' className={styles.profile_info}>
                         <div className='relative'>
                         <img src={ previewImage || user?.profileImage } alt="profile preview" />
                         <label htmlFor="fileInput" className={styles.edit}>
